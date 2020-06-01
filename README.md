@@ -1,7 +1,7 @@
 [Home Page](https://github.com/TrackerLounge/Home)
 
-# Tracking And Computor Vision
-Foot Print tracking experiments with Computer Vision
+# Tracking, Image Processing and Computer Vision
+Foot Print tracking experiments with Image Processing and Computer Vision
 
 # Misadventures in Machine Learning and Tracking
 Summary: 
