@@ -28,6 +28,8 @@ Powerpoint:
 
 # Photogrametry and Tracking
 Summary: 
+I want to detect the edge of a track reliably.
+
 I took ~40 images of a track (my human footprint) and used free photogrametry software to convert these images into a wireframe mesh model of the track. Even on a high-end graphics card, this can take hours to complete.
 Using Blender3D, I colored the track based on elevation and then attempted edge detection on these colorized images.
 This approach produced better results than raw images but is not fool-proof. It is critical to level the model before colorization. 
@@ -49,5 +51,10 @@ Track after running Edge-detection on colorized image of 3D model
 
 Track after running Edge-detection on image of more colors by elevation of 3D model
 <img src='/files/trackAs3DScanMoreColorsByElevation_edge_detected.jpg' width=800>
+
+I also experimented with converting a footprint or track 3D model into a topographic map image using 1-30 layers.
+<img src='/files/trackAsTopographicMap.jpg' width=800>
+
+These approaches produced better edge detection than raw images and may fit into an track edge detection workflow but it is not a complete robust solution in and of itself.
 
 I have a powerpoint but Github allows files that are 25 MB or smaller. The powerpoint is ~167 MB in size - too big.
