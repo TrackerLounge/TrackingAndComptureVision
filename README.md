@@ -1,6 +1,6 @@
 [Home Page](https://github.com/TrackerLounge/Home)
 
-# TrackingAndComptureVision
+# Tracking And Computor Vision
 Foot Print tracking experiments with Computer Vision
 
 # Misadventures in Machine Learning and Tracking
