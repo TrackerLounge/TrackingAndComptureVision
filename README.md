@@ -30,9 +30,13 @@ Powerpoint:
 Summary: 
 I want to detect the edge of a track reliably.
 
-I took ~40 images of a track (my human footprint) and used free photogrametry software to convert these images into a wireframe mesh model of the track. Even on a high-end graphics card, this can take hours to complete.
-Using Blender3D, I colored the track based on elevation and then attempted edge detection on these colorized images.
-This approach produced better results than raw images but is not fool-proof. It is critical to level the model before colorization. 
+I took ~40 images of a track (my human footprint) and used free photogrametry software (e.g. Meshroom or regard3D) to convert these images into a wireframe mesh model of the track. Even on a high-end graphics card, this can take 40 minutes to 23 hours to complete and may produce garbage.
+
+Using Blender3D, I filled in model holes and colored the track based on elevation.
+Using GIMP, I attempted edge detection on these colorized images.
+
+This approach produced better results than raw images but is not fool-proof. 
+It is critical to level the model before colorization. If the ground before the track was made, had a natural bulge, dip or grade, calculating the average ground-level elevation compared to the track can be easily thrown off.
 
 Original Track (foot print) with Pressure Release formation
 <img src='/files/trackTo3DScan.jpg' width=800>
@@ -53,6 +57,7 @@ Track after running Edge-detection on image of more colors by elevation of 3D mo
 <img src='/files/trackAs3DScanMoreColorsByElevation_edge_detected.jpg' width=800>
 
 I also experimented with converting a footprint or track 3D model into a topographic map image using 1-30 layers.
+I ran edge detection on the results of these images. Here is an example.
 <img src='/files/trackAsTopographicMap.jpg' width=800>
 
 These approaches produced better edge detection than raw images and may fit into an track edge detection workflow but it is not a complete robust solution in and of itself.
