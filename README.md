@@ -56,7 +56,7 @@ Track after running Edge-detection on colorized image of 3D model
 Track after running Edge-detection on image of more colors by elevation of 3D model
 <img src='/files/trackAs3DScanMoreColorsByElevation_edge_detected.jpg' width=800>
 
-I also experimented with converting a footprint or track 3D model into a topographic map image using 1-30 layers.
+I also experimented with converting a footprint or track 3D model into a topographic map image using 1-30 layers in black and white.
 I ran edge detection on the results of these images. Here is an example.
 <img src='/files/trackAsTopographicMap.jpg' width=800>
 
