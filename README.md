@@ -65,4 +65,4 @@ These approaches produced better edge detection than raw images and may fit into
 I have a powerpoint but Github allows files that are 25 MB or smaller. The powerpoint is ~167 MB in size - too big.
 
 For a youtube video looking at reading a track pressure release see
-[![Alt text](https://github.com/TrackerLounge/TrackingAndComputerVision/tree/master/files/PressureReleaseInSand.jpg)](https://www.youtube.com/watch?v=EHe-8T_7E3w)
+[![Alt text](https://github.com/TrackerLounge/TrackingAndComputerVision/blob/master/files/PressureReleaseInSand.jpg)](https://www.youtube.com/watch?v=EHe-8T_7E3w)
