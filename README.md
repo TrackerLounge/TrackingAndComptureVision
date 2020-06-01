@@ -36,10 +36,10 @@ Original Track (foot print) with Pressure Release formation
 <img src='/files/trackTo3DScan.jpg' width=800>
 
 Track converted to a 3D Model and colorized based on Elevation
-<img src='/files/trackAs3DScanColoredByElevation02.jpg' width=800>
+<img src='/files/trackAs3DScanColoredByElevation01.jpg' width=800>
 
 Track converted to a 3D Model and colorized based on Elevation - From another angle
-<img src='/files/trackAs3DScanColoredByElevation01.jpg' width=800>
+<img src='/files/trackAs3DScanColoredByElevation02.jpg' width=800>
 
 Track after running Edge-detection on colorized image of 3D model
 <img src='/files/trackAs3DScanColoredEdgeDetected.jpg' width=800>
@@ -49,3 +49,5 @@ Track after running Edge-detection on colorized image of 3D model
 
 Track after running Edge-detection on image of more colors by elevation of 3D model
 <img src='/files/trackAs3DScanMoreColorsByElevation_edge_detected.jpg' width=800>
+
+I have a powerpoint but Github allows files that are 25 MB or smaller. The powerpoint is ~167 MB in size - too big.
