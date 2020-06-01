@@ -36,7 +36,12 @@ Using Blender3D, I filled in model holes and colored the track based on elevatio
 Using GIMP, I attempted edge detection on these colorized images.
 
 This approach produced better results than raw images but is not fool-proof. 
-It is critical to level the model before colorization. If the ground before the track was made, had a natural bulge, dip or grade, calculating the average ground-level elevation compared to the track can be easily thrown off.
+
+It is critical to level the model before colorization. If the ground before the track was made, had a natural bulge, dip or grade, calculating the average ground-level elevation compared to the track can be easily thrown off. 
+
+Using this approach could result in edges of interest in an area that may or may not be attached together contiguously. For example, a high healed shoe would have a distinct heal area and a distinct toe area. Post processing would need to link these two areas together. Another situation would be were only part of a distinct area has a strong edge and the other part has such a slight gradient as to be undetected. For example the tail of the heal may be very clear, but the front edge of the heal may meld seamlessly into the arch area.
+
+This type of approach produced better edge detection than raw images and may fit into an track edge detection workflow but it is not a complete robust solution in and of itself. 
 
 Original Track (foot print) with Pressure Release formation
 <img src='/files/trackTo3DScan.jpg' width=800>
@@ -59,8 +64,6 @@ Track after running Edge-detection on image of more colors by elevation of 3D mo
 I also experimented with converting a footprint or track 3D model into a topographic map image using 1-30 layers in black and white.
 I ran edge detection on the results of these images. Here is an example.
 <img src='/files/trackAsTopographicMap.jpg' width=800>
-
-These approaches produced better edge detection than raw images and may fit into an track edge detection workflow but it is not a complete robust solution in and of itself.
 
 I have a powerpoint but Github allows files that are 25 MB or smaller. The powerpoint is ~167 MB in size - too big.
 
