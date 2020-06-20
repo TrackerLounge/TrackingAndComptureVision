@@ -30,7 +30,7 @@ Powerpoint:
 Summary: 
 I want to detect the edge of a track reliably.
 
-I took ~40 images of a track (my human footprint) and used free photogrammetry software (e.g. Meshroom or regard3D) to convert these images into a wireframe mesh model of the track. Even on a high-end graphics card, this can take 40 minutes to 23 hours to complete and may produce garbage.
+I took ~40 images of a track (my human footprint) in a tracking box [Tracking Box Setup](https://github.com/TrackerLounge/ThreeBoxTrackingPitForTheHomeShop) and used free photogrammetry software (e.g. Meshroom or regard3D) to convert these images into a wireframe mesh model of the track. Even on a high-end graphics card, this can take 40 minutes to 23 hours to complete and may produce garbage.
 
 Using Blender3D, I filled in model holes and colored the track based on elevation.
 Using GIMP, I attempted edge detection on these colorized images.
