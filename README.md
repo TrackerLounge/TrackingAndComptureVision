@@ -54,7 +54,13 @@ Track converted to a 3D Model and colorized based on Elevation - From another an
 
 For the process of coloring a track by elevation see the following youtube video
 [![Alt text](https://github.com/TrackerLounge/TrackingAndComputerVision/blob/master/files/slashScreen.jpg)](https://www.youtube.com/watch?v=BeP38O2wam8)
+
 To get the track.blend file to play with this approach see [Tracking and Photogrammetry](https://github.com/TrackerLounge/TrackingAndPhotogrammetry)
+
+If you would like to take a look at the mesh and color shader in blender, the track_colored.blend file can be downloaded from:
+<a id="raw-url" href="https://raw.githubusercontent.com/TrackerLounge/TrackingAndPhotogrammetry/master/files/track_colored.zip">Download FILE - track_colored.zip</a>
+[track.zip Compressed Blender File](files/track.zip)
+Note: the file is pretty big - 35 MB. Github wouldn't let me upload it uncompressed. I zip compressed the track_colored.blend to track_colored.zip. In compressed form it is 14 MB, still big but not too big for Github.
 
 Track after running Edge-detection on colorized image of 3D model
 <img src='/files/trackAs3DScanColoredEdgeDetected.jpg' width=800>
