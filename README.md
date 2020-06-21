@@ -52,6 +52,10 @@ Track converted to a 3D Model and colorized based on Elevation
 Track converted to a 3D Model and colorized based on Elevation - From another angle
 <img src='/files/trackAs3DScanColoredByElevation02.jpg' width=800>
 
+For the process of coloring a track by elevation see the following youtube video
+[![Alt text](https://github.com/TrackerLounge/TrackingAndComputerVision/blob/master/files/slashScreen.jpg)](https://www.youtube.com/watch?v=BeP38O2wam8)
+To get the track.blend file to play with this approach see [Tracking and Photogrammetry](https://github.com/TrackerLounge/TrackingAndPhotogrammetry)
+
 Track after running Edge-detection on colorized image of 3D model
 <img src='/files/trackAs3DScanColoredEdgeDetected.jpg' width=800>
 
