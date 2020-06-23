@@ -75,6 +75,9 @@ I also experimented with converting a footprint or track 3D model into a topogra
 I ran edge detection on the results of these images. Here is an example.
 <img src='/files/trackAsTopographicMap.jpg' width=800>
 
+For the process of adding topolographic or elevation lines to a track, see the following youtube video:
+[![Alt text](https://github.com/TrackerLounge/TrackingAndComputerVision/blob/master/files/addTopographicLinesToTrackTitle.jpg)](https://www.youtube.com/watch?v=2DCrWZpPdVA)
+
 I have a powerpoint but Github allows files that are 25 MB or smaller. The powerpoint is ~167 MB in size - too big.
 
 For a youtube video looking at reading a track pressure release see
