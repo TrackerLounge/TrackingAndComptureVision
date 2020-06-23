@@ -1,0 +1,127 @@
+import bpy
+mat = bpy.data.materials["Material"]
+
+nodes = mat.node_tree.nodes
+material_output = nodes.get("Material Output")
+p_node = nodes.get("Principled BSDF")
+nodes.remove(p_node)
+
+#Add Textured Coordinate Node for Our Object
+uv_node = nodes.new(type='ShaderNodeTexCoord')
+uv_node.location = -450,300
+
+#Add Seperate XYZ Node
+xyz_node = nodes.new(type='ShaderNodeSeparateXYZ')
+xyz_node.location = -250,300
+
+#Add Color Ramp Node 01
+cr_node_01 = nodes.new(type='ShaderNodeValToRGB')
+cr_node_01.location = 0,300
+for x in range(2, 30):
+    cr_node_01.color_ramp.elements.new(x)
+
+val = 0.05
+x = 0
+while x <=28:
+    cr_node_01.color_ramp.elements[x].position = (val-0.01)
+    cr_node_01.color_ramp.elements[x].color[0]=0.0
+    cr_node_01.color_ramp.elements[x].color[1]=0.0
+    cr_node_01.color_ramp.elements[x].color[2]=0.0
+    cr_node_01.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    cr_node_01.color_ramp.elements[x].position = val
+    cr_node_01.color_ramp.elements[x].color[0]=1.0
+    cr_node_01.color_ramp.elements[x].color[1]=1.0
+    cr_node_01.color_ramp.elements[x].color[2]=1.0
+    cr_node_01.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    cr_node_01.color_ramp.elements[x].position = (val+0.01)
+    cr_node_01.color_ramp.elements[x].color[0]=0.0
+    cr_node_01.color_ramp.elements[x].color[1]=0.0
+    cr_node_01.color_ramp.elements[x].color[2]=0.0
+    cr_node_01.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    val = val + 0.1
+    
+#Add Color Ramp Node 02
+cr_node_02 = nodes.new(type='ShaderNodeValToRGB')
+cr_node_02.location = 0,0
+for x in range(2, 30):
+    cr_node_02.color_ramp.elements.new(x)
+
+val = 0.01
+x = 0
+while x <=28:
+    cr_node_02.color_ramp.elements[x].position = (val-0.01)
+    cr_node_02.color_ramp.elements[x].color[0]=0.0
+    cr_node_02.color_ramp.elements[x].color[1]=0.0
+    cr_node_02.color_ramp.elements[x].color[2]=0.0
+    cr_node_02.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    cr_node_02.color_ramp.elements[x].position = val
+    cr_node_02.color_ramp.elements[x].color[0]=1.0
+    cr_node_02.color_ramp.elements[x].color[1]=1.0
+    cr_node_02.color_ramp.elements[x].color[2]=1.0
+    cr_node_02.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    cr_node_02.color_ramp.elements[x].position = (val+0.01)
+    cr_node_02.color_ramp.elements[x].color[0]=0.0
+    cr_node_02.color_ramp.elements[x].color[1]=0.0
+    cr_node_02.color_ramp.elements[x].color[2]=0.0
+    cr_node_02.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    val = val + 0.1
+    
+#Add Color Ramp Node 03
+cr_node_03 = nodes.new(type='ShaderNodeValToRGB')
+cr_node_03.location = 0,-300
+for x in range(2, 30):
+    cr_node_03.color_ramp.elements.new(x)
+
+val = 0.09
+x = 0
+while x <=28:
+    cr_node_03.color_ramp.elements[x].position = (val-0.01)
+    cr_node_03.color_ramp.elements[x].color[0]=0.0
+    cr_node_03.color_ramp.elements[x].color[1]=0.0
+    cr_node_03.color_ramp.elements[x].color[2]=0.0
+    cr_node_03.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    cr_node_03.color_ramp.elements[x].position = val
+    cr_node_03.color_ramp.elements[x].color[0]=1.0
+    cr_node_03.color_ramp.elements[x].color[1]=1.0
+    cr_node_03.color_ramp.elements[x].color[2]=1.0
+    cr_node_03.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    cr_node_03.color_ramp.elements[x].position = (val+0.01)
+    cr_node_03.color_ramp.elements[x].color[0]=0.0
+    cr_node_03.color_ramp.elements[x].color[1]=0.0
+    cr_node_03.color_ramp.elements[x].color[2]=0.0
+    cr_node_03.color_ramp.elements[x].color[3]=1.0
+    x=x+1
+    val = val + 0.1
+
+
+mix_rgb_node_01 = nodes.new(type='ShaderNodeMixRGB')
+mix_rgb_node_01.location = 350, 300
+
+mix_rgb_node_02 = nodes.new(type='ShaderNodeMixRGB')
+mix_rgb_node_02.location = 550, 0
+
+#Add Diffuse BSDF Node
+diffuse_node = nodes.new(type='ShaderNodeBsdfDiffuse')
+diffuse_node.location = 750, 300
+
+material_output.location = 1000,300
+
+links = mat.node_tree.links
+link_uv_to_xyz = links.new(uv_node.outputs[0], xyz_node.inputs[0])
+link_xyz_to_cr_01 = links.new(xyz_node.outputs[2], cr_node_01.inputs[0])
+link_xyz_to_cr_02 = links.new(xyz_node.outputs[2], cr_node_02.inputs[0])
+link_xyz_to_cr_03 = links.new(xyz_node.outputs[2], cr_node_03.inputs[0])
+link_cr_01_to_mix_rgb_01 = links.new(cr_node_01.outputs[0], mix_rgb_node_01.inputs[1])
+link_cr_02_to_mix_rgb_01 = links.new(cr_node_02.outputs[0], mix_rgb_node_01.inputs[2])
+link_cr_03_to_mix_rgb_02 = links.new(mix_rgb_node_01.outputs[0], mix_rgb_node_02.inputs[1])
+link_cr_03_to_mix_rgb_02 = links.new(cr_node_03.outputs[0], mix_rgb_node_02.inputs[2])
+link_mix_rgb_to_diffuse = links.new(mix_rgb_node_02.outputs[0], diffuse_node.inputs[0])
+link_diffuse_to_output = links.new(diffuse_node.outputs[0], material_output.inputs[0])
