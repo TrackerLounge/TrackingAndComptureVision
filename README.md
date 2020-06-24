@@ -10,7 +10,7 @@ I tried to use TensorFlow to classify the foot prints as "Right Foot" or "Left F
 
 I was not successful. 
 
-I think this is because Tensor Flow is scales the image down and then attempted to use edge detection.
+I think this is because Tensor Flow scales the image down and then attempted to use edge detection.
 If I run Edge Detection (e.g. Canny Edge Detection, Guassian, Prewitt, Nobel, etc.) the algorithms pick up edges around invidual grains of sand. The edge of the track is a gradient. These edge detection algorithms do not do well on gradients.
 
 Original Track (foot print)
