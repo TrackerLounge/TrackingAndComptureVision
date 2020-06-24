@@ -14,6 +14,7 @@ I think this is because Tensor Flow scales the image down and then attempted to 
 If I run Edge Detection (e.g. Canny Edge Detection, Guassian, Prewitt, Nobel, etc.) the algorithms pick up edges around invidual grains of sand. The edge of the track is a gradient. These edge detection algorithms do not do well on gradients.
 
 Original Track (foot print)
+
 <img src='/files/trackInSand.jpg' width=800>
 
 Track after running Edge-detection 
