@@ -20,7 +20,8 @@ Original Track (foot print)
 Track after running Edge-detection 
 <img src='/files/trackInSand_edge_detection.jpg' width=800>
 
-Any leaf, branch, shadow, or blade of grass in the image creates a strong edge. 
+Any leaf, branch, shadow, or blade of grass in the image creates a strong edge. For more discussion on edge detection see [Tracking and Edge Detection](https://github.com/TrackerLounge/TrackingAndEdgeDetection)
+
 Tensorflow tries to classify the images. It sees a lot of snowy images with a few images that have strong edges (with grass, leaves, etc.) and assumes those are the important features of the image. Tensorflow does not see the shape of the track and thus cannot determine "Right Foot" from "Left Foot" given these raw images.
 
 Powerpoint:
